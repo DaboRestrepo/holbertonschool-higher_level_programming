@@ -2,6 +2,4 @@
 def print_matrix_integer(matrix=[[]]):
     if matrix is not None:
         for row in matrix:
-            for item in row:
-                print('{:d}'.format(item), end=' ')
-            print()
+            print(' '.join('{:d}'.format(item) for item in row))
