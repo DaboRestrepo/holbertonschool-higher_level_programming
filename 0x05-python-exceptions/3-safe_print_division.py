@@ -5,6 +5,6 @@ def safe_print_division(a, b):
         mul = a / b
         return mul
     except ZeroDivisionError:
-        return None
+        mul = None
     finally:
         print("Inside result: {}".format(mul))
