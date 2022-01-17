@@ -1,4 +1,4 @@
-#!/urs/bin/python3
+#!/usr/bin/python3
 def safe_print_list_integers(my_list=[], x=0):
     if my_list is not None:
         count = 0
