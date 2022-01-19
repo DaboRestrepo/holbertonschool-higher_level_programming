@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-"""Class to know the area and circumference"""
 import math
 
 
 class MagicClass:
     """Class to define the area and the circumference"""
-
     def __init__(self, radius=0):
         """Inicialize the radius variable"""
         self.__radius = 0
