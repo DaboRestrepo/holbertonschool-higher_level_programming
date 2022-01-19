@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Class to know the area and circumference"""
 import math
 
 
