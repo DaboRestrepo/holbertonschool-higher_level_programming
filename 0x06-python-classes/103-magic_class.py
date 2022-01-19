@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import math
 """Class to know the area and circumference"""
+import math
 
 
 class MagicClass:
