@@ -14,8 +14,8 @@ class Square:
         Args:
             - size (int): the size of the sides.
             - position (tuple): the position in the tuple"""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -47,12 +47,12 @@ class Square:
 
     def my_print(self):
         """Print a # for index in the size"""
-        if self.__size != 0:
-            for h in range(self.__position[1]):
+        if self.size != 0:
+            for h in range(self.position[1]):
                 print()
 
-            for i in range(self.__size):
-                for j in range(self.__position[0]):
+            for i in range(self.size):
+                for j in range(self.position[0]):
                     print(" ", end="")
                 for k in range(self.size):
                     print("#", end="")
@@ -74,13 +74,9 @@ class Square:
 
         Args:
             - value (tuple): the tuple with the numbers"""
-        if not isinstance(value, tuple):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif len(value) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif not isinstance(value[0], int) or not isinstance(value[1], int):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif value[0] < 0 or value[1] < 0:
+        if not isinstance(value, tuple) or len(value) != 2 \
+           or not isinstance(value[0], int) or not isinstance(value[1], int)\
+           or value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
