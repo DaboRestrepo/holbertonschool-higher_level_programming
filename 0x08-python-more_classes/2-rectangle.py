@@ -7,6 +7,7 @@ This supplies the rectangle function.
 
 
 class Rectangle:
+    """This class set the rectangle features"""
     def __init__(self, width=0, height=0):
         """Inicialize the rectangle variables
         Args:
