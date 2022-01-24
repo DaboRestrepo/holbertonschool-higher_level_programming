@@ -6,5 +6,5 @@ This supplies the rectangle function.
 """
 
 
-class rectangle:
+class Rectangle:
     pass
