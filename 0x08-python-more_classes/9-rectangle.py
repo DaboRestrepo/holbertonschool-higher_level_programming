@@ -16,8 +16,8 @@ class Rectangle:
         Args:
         - width is one size of the rectangle.
         - height is the other size of the rectangle"""
-        self.height = height
         self.width = width
+        self.height = height
         Rectangle.number_of_instances += 1
 
     @property
@@ -105,6 +105,4 @@ class Rectangle:
         """Change the rectangle for a square
         Args:
         - size: the square size."""
-        width = size
-        height = size
-        return cls(width, height)
+        return cls(size, size)
