@@ -6,6 +6,9 @@ This supplies the rectangle function.
 """
 
 
+from turtle import width
+
+
 class Rectangle:
     """This class set the rectangle features"""
     number_of_instances = 0
@@ -105,4 +108,4 @@ class Rectangle:
         """Change the rectangle for a square
         Args:
         - size: the square size."""
-        return cls(width=size, height=size)
+        return cls(height=size, width=size)
