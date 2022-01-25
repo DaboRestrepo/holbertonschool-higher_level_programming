@@ -105,4 +105,4 @@ class Rectangle:
         """Change the rectangle for a square
         Args:
         - size: the square size."""
-        return cls(size, size)
+        return cls(width=size, height=size)
