@@ -6,9 +6,6 @@ This supplies the rectangle function.
 """
 
 
-from turtle import width
-
-
 class Rectangle:
     """This class set the rectangle features"""
     number_of_instances = 0
