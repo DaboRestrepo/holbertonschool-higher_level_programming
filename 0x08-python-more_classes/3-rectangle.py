@@ -62,6 +62,6 @@ class Rectangle:
             return ""
         rec_w = "#" * self.width
         rec = rec_w
-        for hei in range(self.height):
+        for hei in range(self.height - 1):
             rec += '\n' + rec_w
         return rec
