@@ -6,19 +6,20 @@ This supplies the text_indentation function.
 """
 
 
+from posixpath import split
+
+
 def text_indentation(text):
     """This function split the text depending of the delimiter:
     >>> text_indentation("Hola. mundo")
     Hola.
     mundo"""
-    if not isinstance(text, str):
-        raise TypeError("text must be a string")
-    end = 0
-    init = 0
-    for i in text:
-        end += 1
-        if i == '.' or i == '?' or i == ':':
-            txt = text[init:end - 1] + i + "\n"
-            print(txt)
-            init = end + 1
-    print(text[init:end], end="")
+    list = []
+    txt = text.replace(".", ".\n\n").replace(":", ":\n\n")\
+              .replace("?", "?\n\n")
+    list = [i.strip() for i in txt.split("\n")]
+    for j in range(len(list)):
+        if j == len(list) - 1:
+            print(list[j], end="")
+        else:
+            print(list[j], end="\n")
