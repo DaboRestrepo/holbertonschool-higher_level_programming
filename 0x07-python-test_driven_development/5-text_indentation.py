@@ -6,14 +6,13 @@ This supplies the text_indentation function.
 """
 
 
-from posixpath import split
-
-
 def text_indentation(text):
     """This function split the text depending of the delimiter:
     >>> text_indentation("Hola. mundo")
     Hola.
     mundo"""
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
     list = []
     txt = text.replace(".", ".\n\n").replace(":", ":\n\n")\
               .replace("?", "?\n\n")
