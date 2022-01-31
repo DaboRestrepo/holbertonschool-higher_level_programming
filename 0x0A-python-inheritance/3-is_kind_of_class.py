@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Function that evaluates the instance type"""
+
+
 def is_kind_of_class(obj, a_class):
     """Return True when object is an instance of a class that inherited from.
     Args:
