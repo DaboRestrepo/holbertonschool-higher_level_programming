@@ -31,7 +31,9 @@ class Rectangle(BaseGeometry):
         bg.integer_validator("height", self.__height)
 
     def __str__(self):
+        """This function implement the magic class str"""
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
 
     def area(self):
+        """Return the rectangle area"""
         return self.__width * self.__height
