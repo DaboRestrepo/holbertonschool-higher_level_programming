@@ -64,12 +64,12 @@ Now use it:
         ...
     TypeError: age must be an integer
     
-    >>> bg.integer_validator(“age”, {3, 4})
+    >>> bg.integer_validator("age", {3, 4})
     Traceback (most recent call last):
         ...
-    SyntaxError: invalid character in identifier
+    TypeError: age must be an integer
 
-    >>> bg.integer_validator(“age”, None)
+    >>> bg.integer_validator("age", None)
     Traceback (most recent call last):
         ...
-    SyntaxError: invalid character in identifier
+    TypeError: age must be an integer
