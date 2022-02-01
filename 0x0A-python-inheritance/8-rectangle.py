@@ -4,21 +4,7 @@
 This supplies the area and the integer_validator functions"""
 
 
-class BaseGeometry:
-    """Empty class BaseGeometry"""
-    def area(self):
-        """Function to raise and Exception error"""
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """Evaluate the value type and value"""
-        if type(value) != int:
-            raise TypeError("{} must be an integer".format(name))
-        elif value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
-
-
-bg = BaseGeometry()
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
@@ -27,5 +13,5 @@ class Rectangle(BaseGeometry):
         """Inicialize the width and height values"""
         self.__width = width
         self.__height = height
-        bg.integer_validator("width", width)
-        bg.integer_validator("height", height)
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
