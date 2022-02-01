@@ -1,0 +1,45 @@
+The ```BaseGeometry`` module
+=============================
+
+Using ``BaseGeometry``:
+-----------------------
+First import ``BaseGeometry`` from ``base_geometry``:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Now use it:
+
+    >>> BaseGeometry.integer_validator("Name", "Daniela")
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> BaseGeometry.integer_validator("Name", 0)
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> BaseGeometry.integer_validator("Name", -5)
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> BaseGeometry.integer_validator("Name", [1, 2])
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> BaseGeometry.integer_validator([1, 3], 0)
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> BaseGeometry.integer_validator()
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
+
+    >>> BaseGeometry.integer_validator(False, True)
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
