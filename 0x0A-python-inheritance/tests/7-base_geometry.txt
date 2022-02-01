@@ -10,6 +10,13 @@ First import ``BaseGeometry`` from ``base_geometry``:
 
 Now use it:
 
+    >>> try:
+    ...     print(bg.area())
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    ... 
+    [Exception] area() is not implemented
+
     >>> bg.integer_validator("my_int", 12)
 
     >>> bg.integer_validator("Name", "Daniela")
