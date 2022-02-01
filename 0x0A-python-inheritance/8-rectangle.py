@@ -4,9 +4,6 @@
 This supplies the area and the integer_validator functions"""
 
 
-from lib2to3.pytree import Base
-
-
 class BaseGeometry:
     """Empty class BaseGeometry"""
     def area(self):
