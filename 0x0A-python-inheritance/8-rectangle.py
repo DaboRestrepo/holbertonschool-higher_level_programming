@@ -23,7 +23,7 @@ bg = BaseGeometry()
 
 class Rectangle(BaseGeometry):
     """This class inherates from BaseGeometry Class"""
-    def __init__(self, width=0, height=0):
+    def __init__(self, width, height):
         """Inicialize the width and height values"""
         self.__width = width
         self.__height = height
