@@ -5,5 +5,4 @@
 def write_file(filename="", text=""):
     """This function allows us to write in an existing or non file"""
     with open(filename, 'w') as file:
-        chars = file.write(text)
-    print(chars)
+        return file.write(text)
