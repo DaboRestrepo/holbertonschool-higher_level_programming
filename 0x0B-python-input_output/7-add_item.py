@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This module make a list with the arguments"""
+
+
 from sys import argv
 import json
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
