@@ -13,7 +13,7 @@ class Square(Rectangle):
         x: the space up the rectangle.
         y: the space at the left of the square"""
         super().__init__(width=size, height=size, x=x, y=y, id=id)
-        self.__size = size
+        self.size = size
 
     def __str__(self):
         """Print the Square information"""
