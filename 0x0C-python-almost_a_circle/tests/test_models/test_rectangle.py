@@ -7,7 +7,7 @@ from models.rectangle import Rectangle
 
 class TestRectangle(unittest.TestCase):
     """This class test the rectangle class"""
-    def Test_init(self):
+    def test_init(self):
         """Test the initialize attr"""
         r1 = Rectangle(5)
         self.assertEqual(r1.id, 1)
@@ -29,7 +29,7 @@ class TestRectangle(unittest.TestCase):
         r7 = Rectangle(23, 9, 78, 3, None)
         self.assertEqual(r7.id, 2)
 
-    def Test_Raises(self):
+    def test_Raises(self):
         """Test the errors"""
         with self.assertRaises(TypeError):
             Rectangle("Hola", 5)
@@ -48,14 +48,14 @@ class TestRectangle(unittest.TestCase):
             Rectangle(1, 2, 3, -4)
             Rectangle(None)
 
-    def Test_Area(self):
+    def test_Area(self):
         """Test the area function"""
         ar1 = Rectangle(2, 5)
         self.assertEqual(ar1.area, 10)
         ar2 = Rectangle(1, 2, 3, 4, 5)
         self.assertEqual(ar2.area, 2)
 
-    def Test_Display(self):
+    def test_Display(self):
         """Test the display function"""
         dr1 = Rectangle(1, 2)
         display = "#\n#\n"
@@ -64,7 +64,7 @@ class TestRectangle(unittest.TestCase):
         display = "\n #\n #\n"
         self.assertEqual(dr2.display, display)
 
-    def Test_str(self):
+    def test_str(self):
         """Test the str function"""
         st1 = Rectangle(1, 2, 3, 4, 5)
         self.assertEqual(st1, "[Rectangle] (5) 3/4 - 1/2")
@@ -73,7 +73,7 @@ class TestRectangle(unittest.TestCase):
         st3 = Rectangle(1, 2, 3)
         self.assertEqual(st3, "[Rectangle] (2) 3/0 - 1/2")
 
-    def Test_update(self):
+    def test_update(self):
         """Test the update args and kwargs"""
         up1 = Rectangle(10, 10, 10, 10)
         up1.update(89)
@@ -83,7 +83,7 @@ class TestRectangle(unittest.TestCase):
         up1.update(id=89, width=1, height=2, x=3, y=4)
         self.assertEqual(up1, "[Rectangle] (89) 3/4 - 1/2")
 
-    def Test_Dict(self):
+    def test_Dict(self):
         """Test to dictionary function"""
         dic1 = Rectangle(1, 2, 3, 4, 5)
         dic1_dictionary = dic1.to_dictionary()

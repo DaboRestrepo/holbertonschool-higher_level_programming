@@ -7,12 +7,12 @@ from models.rectangle import Rectangle
 
 class TestBase(unittest.TestCase):
     """This class test the Base class"""
-    def nbObj(self):
+    def test_nbObj(self):
         """Test the nb_objects"""
         Base._base__nb_objects = 0
         self.assertEqual(Base._base__nb_objects, 0)
 
-    def Test_Init(self):
+    def test_Init(self):
         """Test the initialize attribute"""
         b1 = Base()
         self.assertEqual(b1.id, 1)
@@ -29,7 +29,7 @@ class TestBase(unittest.TestCase):
         b7 = Base({"Hola": 5})
         self.assertEqual(b7.id, {"Hola": 5})
 
-    def Test_to_json(self):
+    def test_to_json(self):
         """Test to json function"""
         dic1 = Rectangle(1, 2, 3, 4, 5)
         dic1_dictionary = dic1.to_dictionary()
@@ -37,7 +37,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(json_dictionary, "{\"x\": 3, \"y\": 4, \"id\": 5,\
                                            \"height\": 2, \"width\": 1}")
 
-    def Test_from_json(self):
+    def test_from_json(self):
         """Test from json function"""
         fj1 = Rectangle(1, 2, 3, 4)
         fj2 = Rectangle(5, 6, 7)

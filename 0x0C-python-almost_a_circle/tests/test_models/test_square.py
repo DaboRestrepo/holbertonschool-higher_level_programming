@@ -7,7 +7,7 @@ from models.square import Square
 
 class TestSquare(unittest.TestCase):
     """Test the Square class"""
-    def heritance(self):
+    def test_heritance(self):
         """Test all the Square functions"""
         s1 = Square(1, 2, 3, 4)
         self.assertEqual(s1, "[Square] (4) 2/3 - 1")
@@ -26,7 +26,7 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s1_dictionary, "[Square] (7) 6/5 - 7\n\
                                          {'id': 7, 'x': 6, 'size': 7, 'y': 5}")
 
-    def Test_errors(self):
+    def test_errors(self):
         """Test the raising errors and exceptions"""
         with self.assertRaises(TypeError):
             Square("Hola", 5)
