@@ -62,10 +62,8 @@ class Square(Rectangle):
     def to_dictionary(self):
         """This function return the Square dict representation"""
         obj = self.__dict__
-        print(obj)
         obj['x'] = obj.pop('_Rectangle__x')
-        obj['size'] = obj.pop('_Square__size')
+        obj['size'] = obj.pop('_Rectangle__width')
         obj['y'] = obj.pop('_Rectangle__y')
         obj.pop('_Rectangle__height')
-        obj.pop('_Rectangle__width')
         return obj
