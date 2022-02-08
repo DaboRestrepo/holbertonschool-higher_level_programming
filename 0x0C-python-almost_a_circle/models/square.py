@@ -13,7 +13,7 @@ class Square(Rectangle):
         x: the space up the rectangle.
         y: the space at the left of the square"""
         super().__init__(width=size, height=size, x=x, y=y, id=id)
-        self.size = size
+        self.__size = size
 
     def __str__(self):
         """Print the Square information"""
@@ -29,9 +29,9 @@ class Square(Rectangle):
     def size(self, value):
         """The setter of size"""
         if not isinstance(value, int):
-            raise TypeError("widht must be an integer")
+            raise TypeError("width must be an integer")
         elif value <= 0:
-            raise ValueError("widht must be > 0")
+            raise ValueError("width must be > 0")
         else:
             self.width = value
             self.height = value
