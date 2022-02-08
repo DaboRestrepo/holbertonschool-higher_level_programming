@@ -24,7 +24,7 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s1, "[Square] (7) 6/5 - 7")
         s1_dictionary = s1.to_dictionary()
         self.assertEqual(s1_dictionary, "[Square] (7) 6/5 - 7\n\
-                                         {'x': 6, 'y': 5, 'height': }")
+                                         {'id': 7, 'x': 6, 'size': 7, 'y': 5}")
 
     def Test_errors(self):
         """Test the raising errors and exceptions"""
