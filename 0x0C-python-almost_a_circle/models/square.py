@@ -13,7 +13,6 @@ class Square(Rectangle):
         x: the space up the rectangle.
         y: the space at the left of the square"""
         super().__init__(width=size, height=size, x=x, y=y, id=id)
-        self.__size = size
 
     def __str__(self):
         """Print the Square information"""
@@ -23,7 +22,7 @@ class Square(Rectangle):
     @property
     def size(self):
         """The getter of size"""
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
