@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """This module soport the TestBase class"""
 import unittest
-from unittest import result
 from models.base import Base
 from models.rectangle import Rectangle
 
