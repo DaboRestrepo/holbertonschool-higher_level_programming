@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS cities (
     state_id INT NOT NULL,
     name VARCHAR(256) NOT NULL,
     CONSTRAINT `cities_ibfk_1` FOREIGN KEY (id) REFERENCES states(id)
-);
+) ENGINE=InnoDB;
