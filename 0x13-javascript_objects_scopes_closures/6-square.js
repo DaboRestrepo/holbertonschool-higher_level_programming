@@ -9,15 +9,15 @@ class Square extends Rectangle {
     if (c) {
       for (let i = 0; i < this.height; i++) {
         let row = '';
-        for (let j = 0; j < this.height; j++) {
-          row += 'C';
+        for (let j = 0; j < this.width; j++) {
+          row += c;
         }
         console.log(row + '');
       }
-    } else {
+    } else if (c === undefined) {
       for (let i = 0; i < this.height; i++) {
         let row = '';
-        for (let j = 0; j < this.height; j++) {
+        for (let j = 0; j < this.width; j++) {
           row += 'X';
         }
         console.log(row + '');
