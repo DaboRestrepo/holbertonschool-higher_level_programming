@@ -1,4 +1,5 @@
+#!/usr/bin/node
 const $ = window.$;
-$('DIV#red_header').on('click', () => {
-  $('DIV#red_header').addClass('red');
+$('DIV#red_header').click( () => {
+  $('header').addClass('red');
 });
