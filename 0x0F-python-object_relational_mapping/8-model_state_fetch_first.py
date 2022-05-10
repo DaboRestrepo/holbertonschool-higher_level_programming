@@ -17,4 +17,7 @@ if __name__ == "__main__":
                             ORDER BY states.id\
                             LIMIT 1;")
     for data in result:
-        print("{}: {}".format(data.id, data.name))
+        if result is None:
+            print('Nothing')
+        else:
+            print("{}: {}".format(data.id, data.name))
