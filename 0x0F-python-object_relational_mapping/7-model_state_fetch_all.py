@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """List the states."""
-from importlib_metadata import metadata
 from model_state import Base, State
 from sys import argv
 from sqlalchemy import (create_engine)
