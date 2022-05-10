@@ -14,10 +14,11 @@ if __name__ == "__main__":
                                  passwd=argv[2], db=argv[3])
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM states\
-                   WHERE name LIKE '%{:s}%'\
+                   WHERE name LIKE '{:s}'\
                    ORDER BY id;".format(argv[4]))
     results = cursor.fetchall()
     for data in results:
-        print(data)
+        if data[1] == argv[4]:
+            print(data)
     cursor.close()
     connection.close()
