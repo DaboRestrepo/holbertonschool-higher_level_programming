@@ -14,7 +14,7 @@ if __name__ == "__main__":
                                  passwd=argv[2], db=argv[3])
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM states\
-                   WHERE BINARY name LIKE '%N%'\
+                   WHERE BINARY name LIKE 'N%'\
                    ORDER BY id;")
     results = cursor.fetchall()
     for data in results:
