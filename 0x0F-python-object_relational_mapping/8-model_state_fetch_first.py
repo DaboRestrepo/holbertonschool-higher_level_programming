@@ -12,12 +12,12 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
-    result = engine.execute("SELECT states.id, states.name\
+    result = engine.execute("SELECT id, name\
                             FROM states\
-                            ORDER BY states.id\
+                            ORDER BY id\
                             LIMIT 1;")
     for data in result:
-        if result is None:
-            print('Nothing')
-        else:
+        if result is not None:
             print("{}: {}".format(data.id, data.name))
+        else:
+            print('Nothing')
