@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Fetch an URL with urllib."""
-from email.headerregistry import ContentTypeHeader
 import urllib.request
 
 if __name__ == "__main__":
